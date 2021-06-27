@@ -1,0 +1,105 @@
+$background-color: #0b0e11;
+$white-color: #dee3ea;
+$lighter-bg-color: #181d25;
+$button-color: #242c37;
+$red-color: #fd4d4d;
+
+html {
+    box-sizing: border-box;
+    background-color: $background-color;
+    body {
+        background-color: $lighter-bg-color;
+        color: $white-color;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: .5em 20vw;
+        border-radius: 1em;
+        padding: 1em;
+        min-height: 95vh;
+        @media screen and (max-width: 600px) {
+            margin: 0;
+        }
+        .home {
+            color: $red-color;
+            position: absolute;
+            top: 0;
+            left: 2em;
+            cursor: pointer;
+            @media screen and (max-width: 1000px) {
+                position: initial;
+                margin-top: .2em;
+                text-align: center;
+            }
+        }
+        .title {
+            text-align: center;
+            font-size: 34px;
+            margin-bottom: 2em;
+        }
+        button {
+            background-color: $button-color;
+            margin-top: 1em;
+            display: block;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            padding: .5em;
+            border-radius: .2em;
+            cursor: pointer;
+        }
+        label {
+            font-size: 20px;
+            color: white;
+        }
+        input {
+            margin-top: .2em;
+            display: block;
+            font-size: 20px;
+            border: none;
+            border-radius: .2em;
+            padding: .3em;
+            &:focus {
+                outline: none;
+            }
+        }
+        .special {
+            color: $red-color;
+        }
+        .flex {
+            display: flex;
+            align-items: center;
+            >* {
+                cursor: pointer;
+            }
+        }
+        .emoji {
+            font-size: 24px;
+            padding: .5em;
+        }
+        .chat {
+            cursor: pointer;
+            position: relative;
+            padding: 1em;
+            border-radius: 1em;
+            margin: 0 10%;
+            background-color: #242c37;
+            @media screen and (max-width: 600px) {
+                margin: 0;
+            }
+            span {
+                font-size: 24px;
+            }
+            .bullet {
+                color: $red-color;
+            }
+            >div {
+                position: absolute;
+                top: 1em;
+                right: 1em;
+            }
+        }
+    }
+    h1 {
+        font-size: 30px;
+    }
+    
+}
