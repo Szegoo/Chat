@@ -1,0 +1,20 @@
+{
+	"name": "Just Chat",
+	"short_name": "just-chat",
+	"lang": "en-US",
+	"start_url": "/",
+	"display": "standalone",
+	"theme_color": "#fd4d4d",
+	"icons": [
+		{
+			"src": "/static/icon-512",
+			"sizes": "512x512",
+			"type": "image/png"
+		},
+		{
+			"src": "/static/icon-192",
+			"sizes": "192x192",
+			"type": "image/png"
+		}
+	]
+}
