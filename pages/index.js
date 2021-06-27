@@ -5,7 +5,6 @@ import Login from '../components/Login';
 import { getChats } from '../lib/api';
 import Messages from '../components/Messages/messages';
 import CreateChat from '../components/CreateChat';
-import Router from 'next/router';
 
 export default class Index extends React.Component {
     state = {
@@ -18,12 +17,15 @@ export default class Index extends React.Component {
     componentDidMount() {
         getChats().then((data) => {
             this.setState({ chats: data });
-        })
+        });
+        Notification.requestPermission();
     }
     setUsername = (username) => {
         this.setState({ username });
     }
     setRoomId = (id) => {
+        const { chats } = this.state;
+        new Notification("Somebody joined the " + chats[id].chatName + " chat");
         console.log('setRoomId called');
         const { username } = this.state;
         this.setState({ id });
