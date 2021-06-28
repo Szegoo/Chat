@@ -40,7 +40,7 @@ nextApp.prepare().then(async () => {
             io.emit('left', socket.id + ' disconnect');
         });
         socket.on('audio', (data) => {
-            io.emit('audio' + data.id, data.dataURL);
+            io.emit('audio' + data.id, {dataURL: data.dataURL, username: data.username});
         })
     })
     app.get('/api/get-chats', (req, res) => {

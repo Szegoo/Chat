@@ -41,9 +41,10 @@ export default class Index extends React.Component {
             messages.push({ text: text, isText: false });
             this.setState({ messages });
         });
-        this.socket.on('audio' + id, dataURL => {
-            let audio = new Audio(dataURL);
-            audio.play();
+        this.socket.on('audio' + id, data => {
+            let audio = new Audio(data.dataURL);
+            if(username !== data.username)
+                audio.play();
         })
         this.socket.on('left', (text) => {
             console.log(text);

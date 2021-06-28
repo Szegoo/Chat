@@ -37,7 +37,7 @@ export default ({ username, id }) => {
             console.log(recordAudio);
             recordAudio.stopRecording(function() {
                 recordAudio.getDataURL(function(audioDataURL) {
-                    socket.emit('audio', {dataURL: audioDataURL, id});
+                    socket.emit('audio', {dataURL: audioDataURL, id, username});
                 })
             })
         }
