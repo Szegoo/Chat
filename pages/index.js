@@ -18,14 +18,14 @@ export default class Index extends React.Component {
         getChats().then((data) => {
             this.setState({ chats: data });
         });
-        Notification.requestPermission();
+        //Notification.requestPermission();
     }
     setUsername = (username) => {
         this.setState({ username });
     }
     setRoomId = (id) => {
         const { chats } = this.state;
-        new Notification("Somebody joined the " + chats[id].chatName + " chat");
+        //new Notification("Somebody joined the " + chats[id].chatName + " chat");
         console.log('setRoomId called');
         const { username } = this.state;
         this.setState({ id });

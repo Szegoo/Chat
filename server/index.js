@@ -3,7 +3,7 @@ const http = require('http');
 var bodyParser = require('body-parser')
 const next = require('next');
 const socketio = require('socket.io');
-const port = parseInt(process.env.PORT || '3000', 10);
+const port = parseInt(process.env.PORT || '3001', 10);
 const dev = process.env.NODE_ENV !== 'production';
 const nextApp = next({ dev });
 const nextHandler = nextApp.getRequestHandler();
